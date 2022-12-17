@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+nav li, footer li{
+    list-style-type: none;
+}
+
+img#logo {
+    border-radius: 1em;
+}
