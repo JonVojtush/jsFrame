@@ -1,6 +1,9 @@
 "use strict";
 
-//* Get HTML source files for inclusion
+// Global variables
+let siteTitle = "jsFrame";
+
+// Get HTML source files for inclusion
 function includeHTML() {
     let z, i, elmnt, file, xhttp;
     // Loop through a collection of all HTML elements:
@@ -32,12 +35,10 @@ function includeHTML() {
 // Load include files into index.html
 includeHTML();
 
-$(() => {
-    // Set image base file path
-    $("img")
-        .attr("src", function (index, src) {
-            return "media/" + src;
-        });
-});
+// Update per nav list items
+    // Update meta data
+        // siteTitle
+    // Update page main HTML section
 
-console.log("Ran script.js");
+// Event Listeners
+    // Nav links

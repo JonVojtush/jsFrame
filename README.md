@@ -1,2 +1,2 @@
 # jsFrame
-A low resource, dynamic website framework that leverages only JavaScript libraries.
+A minialistic approach to a single page web app.
