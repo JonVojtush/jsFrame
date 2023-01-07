@@ -7,6 +7,6 @@ nav li a {
     text-decoration: none;
 }
 
-.disabled { /* BUG 3: Disabled class being used to temoraily satisfy no link requirement */
+.disabled {
     pointer-events: none;
 }

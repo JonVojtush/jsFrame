@@ -34,23 +34,20 @@ function includeHTML() {  // https://www.w3schools.com/howto/howto_html_include.
 
 includeHTML();  // Load include files into index.html
 
-// TO DO - new function to update main
-
 function setLinks() {
-    let z, i, elmnt, href, link;
+    let z, i, elmnt, href, xhttp, link;
     z = document.querySelectorAll("a");
-            console.log(z.length + " a tag(s) found");  // BUG 1: This is only fetching 1 a element when it should find atleast 5
+            console.log(z.length + " <a> tag(s) found");  // BUG : This is only fetching 1 a element when it should find atleast 5
     for (i = 0; i < z.length; i++) {
         elmnt = z[i];
-        href = elmnt.getAttribute("href");
         link = elmnt.getAttribute("target");
-        if (href && link !== "_blank") {
-            console.log("Add event listener, iteration " + (i+1)); // BUG 2: Only seeing one iteration at this time. Assuming its beause z.length=1
-            elmnt.addEventListener("click", function(event){
-                event.preventDefault();  //  BUG 3: Not working
+        if (link !== "_blank") {
+            elmnt.className += " disabled";
+            addEventListener(elmnt, "click", function() {
+                href = elmnt.getAttribute("href");
                 // Make an HTTP request using the attribute value as the file name:
                 xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
+                xhttp.onreadystatechange = function(href) {
                     if (this.readyState == 4) {
                         if (this.status == 200) {main.innerHTML = this.responseText;} // Update the main content area
                         if (this.status == 404) {main.innerHTML = "Content not found. Please let us know what is broken so we can fix it. Thank you.";}
@@ -63,7 +60,6 @@ function setLinks() {
                 return;
             });
         };
-        return;
     };
 };
 
