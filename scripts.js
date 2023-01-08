@@ -6,7 +6,7 @@ let siteTitle = "jsFrame",
 function includeHTML() {  // https://www.w3schools.com/howto/howto_html_include.asp
 // Use the include attribute to load html content dynamically into an html framework
     let z, i, elmnt, include, xhttp;
-    // Loop through a collection of all HTML elements:
+    // Loop through a collection of specific HTML elements:
     z = document.querySelectorAll("header, main, aside, footer");
     for (i = 0; i < z.length; i++) {
         elmnt = z[i];
@@ -36,6 +36,7 @@ includeHTML();  // Load include files into index.html
 
 function setLinks() {
     let z, i, elmnt, href, xhttp, link;
+    // Loop through a collection of specific HTML elements:
     z = document.querySelectorAll("a");
             console.log(z.length + " <a> tag(s) found");  // BUG : This is only fetching 1 a element when it should find atleast 5
     for (i = 0; i < z.length; i++) {
