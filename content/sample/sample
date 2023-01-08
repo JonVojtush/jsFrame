@@ -8,7 +8,7 @@
     <section>
         <h1>Sample</h1>
         <ul>
-            <li><a href="content/sample/sample.html">Test Change Main</a></li>
+            <li><a href="content/sample/sample">Test Change Main</a></li>
             <li><a href="https://google.com" target="_blank">Test Google</a></li>
         </ul>
     </section>
